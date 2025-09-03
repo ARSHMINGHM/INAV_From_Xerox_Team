@@ -1,0 +1,213 @@
+
+
+# diff
+
+# version
+# INAV/TMOTORF7V2 7.1.2 Jun  1 2024 / 00:57:54 (4e1e59eb)
+# GCC-10.3.1 20210824 (release)
+
+# start the command batch
+batch start
+
+# resources
+
+# Timer overrides
+
+# Outputs [servo]
+
+# safehome
+
+# Fixed Wing Approach
+
+# features
+feature -TX_PROF_SEL
+feature -TELEMETRY
+feature -OSD
+feature PWM_OUTPUT_ENABLE
+
+# beeper
+beeper -RUNTIME_CALIBRATION
+beeper -HW_FAILURE
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -RX_SET
+beeper -ACTION_SUCCESS
+beeper -ACTION_FAIL
+beeper -READY_BEEP
+beeper -MULTI_BEEPS
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -LAUNCH_MODE
+beeper -LAUNCH_MODE_LOW_THROTTLE
+beeper -LAUNCH_MODE_IDLE_START
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSED
+
+# blackbox
+blackbox NAV_ACC
+blackbox NAV_POS
+blackbox NAV_PID
+blackbox MAG
+blackbox ACC
+blackbox ATTI
+blackbox RC_DATA
+blackbox RC_COMMAND
+blackbox MOTORS
+blackbox GYRO_RAW
+blackbox -PEAKS_R
+blackbox -PEAKS_P
+blackbox -PEAKS_Y
+
+# Receiver: Channel map
+
+# Ports
+serial 2 1 115200 115200 0 115200
+serial 3 262144 115200 115200 0 115200
+serial 4 0 115200 115200 0 115200
+
+# LEDs
+
+# LED color
+
+# LED mode_color
+
+# Modes [aux]
+aux 0 0 2 1800 2100
+aux 1 1 0 900 2100
+aux 2 3 0 1825 1950
+aux 3 33 0 1825 1950
+
+# Adjustments [adjrange]
+
+# Receiver rxrange
+
+# temp_sensor
+
+# Mission Control Waypoints [wp]
+#wp 0 invalid
+
+# OSD [osd_layout]
+
+# Programming: logic
+
+# Programming: global variables
+
+# Programming: PID controllers
+
+# OSD: custom elements
+
+# master
+set looptime = 500
+set gyro_main_lpf_hz = 40
+set gyro_main_lpf_type = PT1
+set dynamic_gyro_notch_q = 250
+set dynamic_gyro_notch_min_hz = 60
+set dynamic_gyro_notch_mode = 3D
+set setpoint_kalman_q = 200
+set gyro_zero_x = -37
+set gyro_zero_y = 11
+set gyro_zero_z = 11
+set ins_gravity_cmss =  990.463
+set acc_hardware = MPU6000
+set acczero_x = -4
+set acczero_y = 15
+set acczero_z = -49
+set accgain_x = 4107
+set accgain_y = 4116
+set accgain_z = 4047
+set rangefinder_hardware = VL53L1X
+set align_mag = CW270FLIP
+set mag_hardware = NONE
+set magzero_x = -262
+set magzero_y = 217
+set magzero_z = 205
+set maggain_x = 1264
+set maggain_y = 1373
+set maggain_z = 1331
+set align_mag_pitch = 1800
+set align_mag_yaw = 900
+set baro_hardware = BMP280
+set blackbox_rate_denom = 2
+set motor_pwm_protocol = DSHOT600
+set failsafe_procedure = DROP
+set align_board_yaw = 900
+set applied_defaults = 5
+set rpm_gyro_filter_enabled = ON
+set rpm_gyro_min_hz = 40
+set airmode_type = THROTTLE_THRESHOLD
+set inav_allow_dead_reckoning = ON
+set inav_max_surface_altitude = 350
+set inav_w_z_baro_p =  0.350
+set inav_w_z_gps_p =  0.000
+set inav_w_z_gps_v =  0.000
+set inav_max_eph_epv =  9999.001
+set inav_baro_epv =  0.000
+set nav_mc_althold_throttle = MID_STICK
+set nav_max_terrain_follow_alt = 200
+set nav_max_altitude = 350
+set debug_mode = AGL
+
+# mixer_profile
+mixer_profile 1
+
+set model_preview_type = 3
+
+# Mixer: motor mixer
+
+mmix reset
+
+mmix 0  1.000 -1.000 -1.000  1.000
+mmix 1  1.000  1.000 -1.000 -1.000
+mmix 2  1.000 -1.000  1.000 -1.000
+mmix 3  1.000  1.000  1.000  1.000
+
+# Mixer: servo mixer
+
+# profile
+profile 2
+
+set mc_p_pitch = 60
+set mc_i_pitch = 15
+set mc_d_pitch = 20
+set mc_cd_pitch = 40
+set mc_p_roll = 29
+set mc_i_roll = 10
+set mc_d_roll = 20
+set mc_cd_roll = 40
+set mc_p_yaw = 40
+set mc_i_yaw = 80
+set mc_cd_yaw = 40
+set max_angle_inclination_rll = 200
+set max_angle_inclination_pit = 200
+set dterm_lpf_hz = 60
+set nav_mc_pos_z_p = 115
+set nav_mc_vel_z_p = 90
+set nav_mc_vel_z_i = 2
+set nav_mc_vel_z_d = 130
+set tpa_breakpoint = 1000
+
+# battery_profile
+battery_profile 1
+
+set bat_cells = 4
+set vbat_warning_cell_voltage = 360
+set battery_capacity = 5000
+set throttle_scale =  0.500
+set throttle_idle =  10.000
+set nav_mc_hover_thr = 1450
+
+# save configuration
+save
+
+# end the command batch
+batch end
+
+# 
